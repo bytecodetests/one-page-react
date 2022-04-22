@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #545863 ;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -24,6 +26,10 @@
   color: white;
 }
 
+header{
+  /* margin-top: 4%; */
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +41,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Navtop{
+  background-color: #545863;
+}
+
+.loginForm{
+  width: 50% !important;
+}
+
+.login_register_top{
+  padding: 15%;
 }
