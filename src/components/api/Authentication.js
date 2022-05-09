@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export async function LoginUser(userObject) {
+export function LoginUser(userObject) {
     if(! localStorage.getItem('authUser')){
     axios.post('http://127.0.0.1:8000/api/auth/login', userObject)
         .then((res) => {
@@ -14,7 +14,7 @@ export async function LoginUser(userObject) {
     }
 }
 
-export async function LogoutUser() {
+export function LogoutUser() {
     localStorage.removeItem('authUser');
     window.location.pathname = '/login';
     // axios.post('http://127.0.0.1:8000/api/auth/logout', { headers: {"Authorization" : `Bearer ${authUser.access_token}`} })

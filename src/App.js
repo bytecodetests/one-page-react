@@ -18,6 +18,7 @@ import Orders from './components/orders';
 import Products from './components/Products';
 import ProtectedRoutes from './components/GuardedRoute';
 import { useAuth } from "./components/GuardedRoute";
+import Weather from "./components/Weather";
 
 
 function NotFound() {
@@ -35,8 +36,9 @@ function App() {
             {useAuth() ? (
               <Nav>
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <Nav.Link as={Link} to="/products">products</Nav.Link>
-                <Nav.Link as={Link} to="/orders">orders</Nav.Link>
+                <Nav.Link as={Link} to="/products">Products</Nav.Link>
+                <Nav.Link as={Link} to="/orders">Orders</Nav.Link>
+                <Nav.Link as={Link} to="/weather">Weather</Nav.Link>
                 <NavDropdown title="Profile" id="collasible-nav-dropdown">
                   <NavDropdown.Item as={Link} to="/profile">About me</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="" onClick={LogoutUser}>Logout</NavDropdown.Item>
@@ -60,6 +62,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/weather" element={<Weather />} />
         </Route>
         
         <Route path="*" element={<NotFound/>} />
